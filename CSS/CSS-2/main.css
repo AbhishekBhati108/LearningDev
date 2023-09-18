@@ -1,0 +1,23 @@
+body {
+    padding: 10%;
+    font-size: 2rem;
+    font-family: sans-serif;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    color: hsl(207, 44%, 49%);
+}
+
+/* pesude class */
+/* a:visited {
+    color: purple;
+} */
+a:hover, a:focus {
+    color: hsl(207, 44%, 49%, 0.7);
+   /*  opacity: 0.7; */
+}
+a:active {
+    color: red;
+}
