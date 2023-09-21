@@ -27,11 +27,11 @@ createOrder(cart, function (orderID) {
 // Using Promise chaining we can avoid callback hell
 createOrder(cart)
   .then(function (orderID) {
-    proceedToPayment(orderID);
+    return proceedToPayment(orderID);
   })
   .then(function (paymentInfo) {
-    showOrderSummery(paymentInfo);
+    return showOrderSummery(paymentInfo);
   })
   .then(function () {
-    updateWalletBalance();
+    return updateWalletBalance();
   });
