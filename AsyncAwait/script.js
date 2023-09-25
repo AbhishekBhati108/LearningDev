@@ -9,7 +9,13 @@
 
 */
 
-const promise = new Promise((resolve, reject) => {
+const promise1 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("This is resolved");
+  }, 5000);
+});
+
+const promise2 = new Promise((resolve, reject) => {
   setTimeout(() => {
     resolve("This is resolved");
   }, 10000);
@@ -18,17 +24,19 @@ const promise = new Promise((resolve, reject) => {
 // async function getData() {
 //   return promise;
 // }
-
 // const dataPromise = getData();
 // console.log(dataPromise);
-
 // dataPromise.then((res) => console.log(res));
 
 // Handling promise using async/await
 async function handlePromise() {
-  const val = await promise;
-  console.log("Namaste JS");
-  console.log(val);
+  const val1 = await promise1;
+  console.log("Namaste JS 1");
+  console.log(val1);
+
+  const val2 = await promise2;
+  console.log("Namaste JS 2");
+  console.log(val2);
 }
 handlePromise();
 
